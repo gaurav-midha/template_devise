@@ -1,0 +1,2148 @@
+Script started on Fri 22 Apr 2011 12:43:01 PM IST
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 12:43:47] INFO  WEBrick 1.3.1
+[2011-04-22 12:43:47] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 12:43:47] INFO  WEBrick::HTTPServer#start: pid=4818 port=3000
+
+
+Started GET "/products" for 127.0.0.1 at 2011-04-22 12:43:58 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 107ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-04-22 12:44:02 +0530
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (56.7ms)
+Rendered products/new.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 82ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-04-22 12:44:25 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "product"=>{"name"=>"500 gb seagate hard disk", "price"=>"5000"}, "commit"=>"Create Product"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  describe `products`
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `products` (`name`, `price`, `created_at`, `updated_at`) VALUES ('500 gb seagate hard disk', 5000, '2011-04-22 07:14:25', '2011-04-22 07:14:25')[0m
+  [1m[35mSQL (59.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 118ms
+
+
+Started GET "/products/1" for 127.0.0.1 at 2011-04-22 12:44:25 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 1 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 30ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-04-22 12:44:29 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.5ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 30ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-04-22 12:44:31 +0530
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (10.5ms)
+Rendered products/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 68ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-04-22 12:44:44 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "product"=>{"name"=>"asus dvd writer", "price"=>""}, "commit"=>"Create Product"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  describe `products`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `products` (`name`, `price`, `created_at`, `updated_at`) VALUES ('asus dvd writer', NULL, '2011-04-22 07:14:44', '2011-04-22 07:14:44')[0m
+  [1m[35mSQL (67.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/2
+Completed 302 Found in 93ms
+
+
+Started GET "/products/2" for 127.0.0.1 at 2011-04-22 12:44:44 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 2 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 31ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2011-04-22 12:44:49 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (49.2ms)
+Completed 200 OK in 66ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-04-22 12:44:52 +0530
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (10.0ms)
+Rendered products/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 34ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-04-22 12:45:31 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "product"=>{"name"=>"2gb hynix ram", "price"=>"1200"}, "commit"=>"Create Product"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  describe `products`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `products` (`name`, `price`, `created_at`, `updated_at`) VALUES ('2gb hynix ram', 1200, '2011-04-22 07:15:31', '2011-04-22 07:15:31')[0m
+  [1m[35mSQL (52.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 79ms
+
+
+Started GET "/products/3" for 127.0.0.1 at 2011-04-22 12:45:31 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 3 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 29ms (Views: 16.3ms | ActiveRecord: 54.8ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2011-04-22 12:47:02 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.6ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 39ms (Views: 24.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2011-04-22 12:47:07 +0530
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (10.4ms)
+Rendered products/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 35ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2011-04-22 12:47:47 +0530
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "product"=>{"name"=>"logitech keyboard and mouse kit", "price"=>"750"}, "commit"=>"Create Product"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  describe `products`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `products` (`name`, `price`, `created_at`, `updated_at`) VALUES ('logitech keyboard and mouse kit', 750, '2011-04-22 07:17:47', '2011-04-22 07:17:47')[0m
+  [1m[35mSQL (51.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 78ms
+
+
+Started GET "/products/4" for 127.0.0.1 at 2011-04-22 12:47:47 +0530
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products` WHERE `products`.`id` = 4 LIMIT 1[0m
+Rendered products/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 31ms (Views: 17.3ms | ActiveRecord: 53.5ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2011-04-22 12:47:54 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 37ms (Views: 25.0ms | ActiveRecord: 0.4ms)
+^C[2011-04-22 12:51:27] INFO  going to shutdown ...
+[2011-04-22 12:51:27] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ bundle install
+Fetching source index for http://rubygems.org/
+Using rake (0.8.7) 
+Using abstract (1.0.0) 
+Using activesupport (3.0.5) 
+Using builder (2.1.2) 
+Using i18n (0.5.0) 
+Using activemodel (3.0.5) 
+Using erubis (2.6.6) 
+Using rack (1.2.2) 
+Using rack-mount (0.6.14) 
+Using rack-test (0.5.7) 
+Using tzinfo (0.3.26) 
+Using actionpack (3.0.5) 
+Using mime-types (1.16) 
+Using polyglot (0.3.1) 
+Using treetop (1.4.9) 
+Using mail (2.2.17) 
+Using actionmailer (3.0.5) 
+Using arel (2.0.9) 
+Using activerecord (3.0.5) 
+Using activeresource (3.0.5) 
+Using bundler (1.0.7) 
+Installing warden (0.10.7) 
+Installing devise (1.1.rc0) 
+Using mysql2 (0.2.7) 
+Using thor (0.14.6) 
+Using railties (3.0.5) 
+Using rails (3.0.5) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails gr[Kenerate devise_insta ll
+[1m[32m      create[0m  config/initializers/devise.rb
+[1m[32m      create[0m  config/locales/devise.en.yml
+
+===============================================================================
+
+Some setup you must do manually if you haven't yet:
+
+  1. Setup default url options for your specific environment. Here is an
+     example of development environment:
+
+       config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+     This is a required Rails configuration. In production is must be the
+     actual host of your application
+
+  2. Ensure you have defined root_url to *something* in your config/routes.rb.
+     For example:
+
+       root :to => "home#index"
+
+===============================================================================
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails generate devise ?U[K[K
+Usage:
+  rails generate devise NAME [options]
+
+Options:
+  -o, [--orm=ORM]    # Indicates when to generate orm
+                     # Default: active_record
+      [--migration]  # Indicates when to generate migration
+                     # Default: true
+
+Runtime options:
+  -f, [--force]    # Overwrite files that already exist
+  -p, [--pretend]  # Run but do not make any changes
+  -q, [--quiet]    # Supress status output
+  -s, [--skip]     # Skip files that already exist
+
+Generates a model with the given NAME (if one does not exist) with devise configuration plus a migration file and devise routes.
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ `[Krails generate devise User
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    app/models/user.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/user_test.rb
+[1m[32m      create[0m      test/fixtures/users.yml
+[1m[32m      insert[0m  app/models/user.rb
+[1m[32m      create[0m  db/migrate/20110422072827_devise_create_users.rb
+[1m[32m       route[0m  devise_for :users
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ ruby -v
+ruby 1.9.2p136 (2010-12-25 revision 30365) [i686-linux]
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ ruby -vails generate devise User[K_installl[A]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ [13Pbundle install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Prails serverke db:migrate
+(in /home/gaurav/rails/template_devise)
+==  DeviseCreateUsers: migrating ==============================================
+-- create_table(:users)
+   -> 0.1457s
+-- add_index(:users, :email, {:unique=>true})
+   -> 0.2655s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.2339s
+==  DeviseCreateUsers: migrated (0.6456s) =====================================
+
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake db:migrate[8Puby -vails generate devise User[K_installl[A]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ [13Pbundle install
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Prails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 13:19:26] INFO  WEBrick 1.3.1
+[2011-04-22 13:19:26] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 13:19:26] INFO  WEBrick::HTTPServer#start: pid=5124 port=3000
+^C[2011-04-22 13:20:03] INFO  going to shutdown ...
+[2011-04-22 13:20:03] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 13:20:09] INFO  WEBrick 1.3.1
+[2011-04-22 13:20:09] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 13:20:09] INFO  WEBrick::HTTPServer#start: pid=5136 port=3000
+^C[2011-04-22 13:21:43] INFO  going to shutdown ...
+[2011-04-22 13:21:43] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Exiting
+/home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:171:in `default_controller_and_action': missing :action (ArgumentError)
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:72:in `normalize_options!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:55:in `initialize'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:272:in `new'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:272:in `match'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:1173:in `match'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:1360:in `match'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:259:in `root'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:1184:in `root'
+	from /home/gaurav/rails/template_devise/config/routes.rb:55:in `block in <top (required)>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:233:in `instance_exec'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:233:in `draw'
+	from /home/gaurav/rails/template_devise/config/routes.rb:1:in `<top (required)>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:235:in `load'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:235:in `block in load'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:225:in `block in load_dependency'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:235:in `load'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:127:in `block in reload_routes!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:127:in `each'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:127:in `reload_routes!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:120:in `block in routes_reloader'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/file_update_checker.rb:32:in `call'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/file_update_checker.rb:32:in `execute_if_updated'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application/finisher.rb:51:in `block (2 levels) in <module:Finisher>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application/finisher.rb:52:in `call'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application/finisher.rb:52:in `block in <module:Finisher>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:25:in `run'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:50:in `block in run_initializers'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:49:in `each'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:134:in `initialize!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+	from /home/gaurav/rails/template_devise/config/environment.rb:5:in `<top (required)>'
+	from /home/gaurav/rails/template_devise/config.ru:3:in `require'
+	from /home/gaurav/rails/template_devise/config.ru:3:in `block in <main>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:46:in `instance_eval'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:46:in `initialize'
+	from /home/gaurav/rails/template_devise/config.ru:1:in `new'
+	from /home/gaurav/rails/template_devise/config.ru:1:in `<main>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:35:in `eval'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:35:in `parse_file'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/server.rb:162:in `app'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/server.rb:248:in `wrapped_app'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands/server.rb:65:in `start'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands.rb:30:in `block in <top (required)>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands.rb:27:in `tap'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands.rb:27:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ [K]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Exiting
+/home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:171:in `default_controller_and_action': missing :action (ArgumentError)
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:72:in `normalize_options!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:55:in `initialize'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:272:in `new'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:272:in `match'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:1173:in `match'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:1360:in `match'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:259:in `root'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/mapper.rb:1184:in `root'
+	from /home/gaurav/rails/template_devise/config/routes.rb:55:in `block in <top (required)>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:233:in `instance_exec'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:233:in `draw'
+	from /home/gaurav/rails/template_devise/config/routes.rb:1:in `<top (required)>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:235:in `load'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:235:in `block in load'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:225:in `block in load_dependency'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/dependencies.rb:235:in `load'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:127:in `block in reload_routes!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:127:in `each'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:127:in `reload_routes!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:120:in `block in routes_reloader'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/file_update_checker.rb:32:in `call'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/file_update_checker.rb:32:in `execute_if_updated'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application/finisher.rb:51:in `block (2 levels) in <module:Finisher>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application/finisher.rb:52:in `call'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application/finisher.rb:52:in `block in <module:Finisher>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:25:in `instance_exec'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:25:in `run'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:50:in `block in run_initializers'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:49:in `each'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/initializable.rb:49:in `run_initializers'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:134:in `initialize!'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+	from /home/gaurav/rails/template_devise/config/environment.rb:5:in `<top (required)>'
+	from /home/gaurav/rails/template_devise/config.ru:3:in `require'
+	from /home/gaurav/rails/template_devise/config.ru:3:in `block in <main>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:46:in `instance_eval'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:46:in `initialize'
+	from /home/gaurav/rails/template_devise/config.ru:1:in `new'
+	from /home/gaurav/rails/template_devise/config.ru:1:in `<main>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:35:in `eval'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/builder.rb:35:in `parse_file'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/server.rb:162:in `app'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/server.rb:248:in `wrapped_app'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/server.rb:213:in `start'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands/server.rb:65:in `start'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands.rb:30:in `block in <top (required)>'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands.rb:27:in `tap'
+	from /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/commands.rb:27:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 13:25:19] INFO  WEBrick 1.3.1
+[2011-04-22 13:25:19] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 13:25:19] INFO  WEBrick::HTTPServer#start: pid=5180 port=3000
+
+
+Started GET "/products" for 127.0.0.1 at 2011-04-22 13:25:33 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 114ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 13:48:35 +0530
+DEPRECATION WARNING: :name_prefix was deprecated in the new router syntax. Use :as instead. (called from block in <top (required)> at /home/gaurav/rails/template_devise/config/routes.rb:2)
+DEPRECATION WARNING: :name_prefix was deprecated in the new router syntax. Use :as instead. (called from block in <top (required)> at /home/gaurav/rails/template_devise/config/routes.rb:2)
+DEPRECATION WARNING: :name_prefix was deprecated in the new router syntax. Use :as instead. (called from block in <top (required)> at /home/gaurav/rails/template_devise/config/routes.rb:2)
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 39ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 13:49:39 +0530
+
+ActionController::RoutingError (No route matches "/users/sign_up"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-04-22 13:49:46 +0530
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 13:50:40 +0530
+
+ActionController::RoutingError (No route matches "/users/sign_up"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+^C[2011-04-22 13:50:49] INFO  going to shutdown ...
+[2011-04-22 13:50:49] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ [K]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake rour[Ktes
+(in /home/gaurav/rails/template_devise)
+      new_user_session GET    /users/sign_in(.:format)              {:action=>"new", :controller=>"devise/sessions"}
+          user_session POST   /users/sign_in(.:format)              {:action=>"create", :controller=>"devise/sessions"}
+  destroy_user_session GET    /users/sign_out(.:format)             {:action=>"destroy", :controller=>"devise/sessions"}
+         user_password POST   /users/password(.:format)             {:action=>"create", :controller=>"devise/passwords"}
+     new_user_password GET    /users/password/new(.:format)         {:action=>"new", :controller=>"devise/passwords"}
+    edit_user_password GET    /users/password/edit(.:format)        {:action=>"edit", :controller=>"devise/passwords"}
+                       PUT    /users/password(.:format)             {:action=>"update", :controller=>"devise/passwords"}
+     user_registration POST   /users/registration(.:format)         {:action=>"create", :controller=>"devise/registrations"}
+ new_user_registration GET    /users/registration/sign_up(.:format) {:action=>"new", :controller=>"devise/registrations"}
+edit_user_registration GET    /users/registration/edit(.:format)    {:action=>"edit", :controller=>"devise/registrations"}
+                       PUT    /users/registration(.:format)         {:action=>"update", :controller=>"devise/registrations"}
+                       DELETE /users/registration(.:format)         {:action=>"destroy", :controller=>"devise/registrations"}
+     user_confirmation POST   /users/confirmation(.:format)         {:action=>"create", :controller=>"devise/confirmations"}
+ new_user_confirmation GET    /users/confirmation/new(.:format)     {:action=>"new", :controller=>"devise/confirmations"}
+                       GET    /users/confirmation(.:format)         {:action=>"show", :controller=>"devise/confirmations"}
+              products GET    /products(.:format)                   {:action=>"index", :controller=>"products"}
+                       POST   /products(.:format)                   {:action=>"create", :controller=>"products"}
+           new_product GET    /products/new(.:format)               {:action=>"new", :controller=>"products"}
+          edit_product GET    /products/:id/edit(.:format)          {:action=>"edit", :controller=>"products"}
+               product GET    /products/:id(.:format)               {:action=>"show", :controller=>"products"}
+                       PUT    /products/:id(.:format)               {:action=>"update", :controller=>"products"}
+                       DELETE /products/:id(.:format)               {:action=>"destroy", :controller=>"products"}
+                  root        /(.:format)                           {:controller=>"products", :action=>"index"}
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake routesils server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 13:51:52] INFO  WEBrick 1.3.1
+[2011-04-22 13:51:52] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 13:51:52] INFO  WEBrick::HTTPServer#start: pid=5391 port=3000
+
+
+Started GET "/users/registration" for 127.0.0.1 at 2011-04-22 13:52:10 +0530
+
+ActionController::RoutingError (No route matches "/users/registration"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+ :confirmable,
+
+Started GET "/registration" for 127.0.0.1 at 2011-04-22 13:53:17 +0530
+
+ActionController::RoutingError (No route matches "/registration"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/users/registration" for 127.0.0.1 at 2011-04-22 13:53:24 +0530
+
+ActionController::RoutingError (No route matches "/users/registration"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+^C[2011-04-22 13:54:22] INFO  going to shutdown ...
+[2011-04-22 13:54:22] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake db:migrate
+(in /home/gaurav/rails/template_devise)
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake [K[K[K[K[Ks[Krails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 13:55:05] INFO  WEBrick 1.3.1
+[2011-04-22 13:55:05] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 13:55:05] INFO  WEBrick::HTTPServer#start: pid=5416 port=3000
+
+
+Started GET "/users/registration" for 127.0.0.1 at 2011-04-22 13:55:14 +0530
+
+ActionController::RoutingError (No route matches "/users/registration"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/registration" for 127.0.0.1 at 2011-04-22 13:55:17 +0530
+
+ActionController::RoutingError (No route matches "/users/registration"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+^C[2011-04-22 13:56:54] INFO  going to shutdown ...
+[2011-04-22 13:56:54] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails serverke db:migrate[3Pils server[1Pke routesils serverke db:migrate[3Pils server[1Pke routes
+(in /home/gaurav/rails/template_devise)
+      new_user_session GET    /users/sign_in(.:format)              {:action=>"new", :controller=>"devise/sessions"}
+          user_session POST   /users/sign_in(.:format)              {:action=>"create", :controller=>"devise/sessions"}
+  destroy_user_session GET    /users/sign_out(.:format)             {:action=>"destroy", :controller=>"devise/sessions"}
+         user_password POST   /users/password(.:format)             {:action=>"create", :controller=>"devise/passwords"}
+     new_user_password GET    /users/password/new(.:format)         {:action=>"new", :controller=>"devise/passwords"}
+    edit_user_password GET    /users/password/edit(.:format)        {:action=>"edit", :controller=>"devise/passwords"}
+                       PUT    /users/password(.:format)             {:action=>"update", :controller=>"devise/passwords"}
+     user_registration POST   /users/registration(.:format)         {:action=>"create", :controller=>"devise/registrations"}
+ new_user_registration GET    /users/registration/sign_up(.:format) {:action=>"new", :controller=>"devise/registrations"}
+edit_user_registration GET    /users/registration/edit(.:format)    {:action=>"edit", :controller=>"devise/registrations"}
+                       PUT    /users/registration(.:format)         {:action=>"update", :controller=>"devise/registrations"}
+                       DELETE /users/registration(.:format)         {:action=>"destroy", :controller=>"devise/registrations"}
+     user_confirmation POST   /users/confirmation(.:format)         {:action=>"create", :controller=>"devise/confirmations"}
+ new_user_confirmation GET    /users/confirmation/new(.:format)     {:action=>"new", :controller=>"devise/confirmations"}
+                       GET    /users/confirmation(.:format)         {:action=>"show", :controller=>"devise/confirmations"}
+              products GET    /products(.:format)                   {:action=>"index", :controller=>"products"}
+                       POST   /products(.:format)                   {:action=>"create", :controller=>"products"}
+           new_product GET    /products/new(.:format)               {:action=>"new", :controller=>"products"}
+          edit_product GET    /products/:id/edit(.:format)          {:action=>"edit", :controller=>"products"}
+               product GET    /products/:id(.:format)               {:action=>"show", :controller=>"products"}
+                       PUT    /products/:id(.:format)               {:action=>"update", :controller=>"products"}
+                       DELETE /products/:id(.:format)               {:action=>"destroy", :controller=>"products"}
+                  root        /(.:format)                           {:controller=>"products", :action=>"index"}
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake routesils server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2011-04-22 13:57:58] INFO  WEBrick 1.3.1
+[2011-04-22 13:57:58] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 13:57:58] INFO  WEBrick::HTTPServer#start: pid=5491 port=3000
+
+
+Started GET "/users/registration/sign_up" for 127.0.0.1 at 2011-04-22 13:58:11 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+DEPRECATION WARNING: Using form_for(:name, @resource) is deprecated. Please use form_for(@resource, :as => :name) instead. (called from realtime at /home/gaurav/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/benchmark.rb:309)
+DEPRECATION WARNING: f.error_messages was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from realtime at /home/gaurav/.rvm/rubies/ruby-1.9.2-p136/lib/ruby/1.9.1/benchmark.rb:309)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.rc0/app/views/devise/shared/_links.erb (2.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.rc0/app/views/devise/registrations/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 46ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+^[[A^C[2011-04-22 14:05:49] INFO  going to shutdown ...
+[2011-04-22 14:05:49] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ 
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server[1Pke routesils server[Kbundle install
+Fetching source index for http://rubygems.org/
+Using rake (0.8.7) 
+Using abstract (1.0.0) 
+Using activesupport (3.0.5) 
+Using builder (2.1.2) 
+Using i18n (0.5.0) 
+Using activemodel (3.0.5) 
+Using erubis (2.6.6) 
+Using rack (1.2.2) 
+Using rack-mount (0.6.14) 
+Using rack-test (0.5.7) 
+Using tzinfo (0.3.26) 
+Using actionpack (3.0.5) 
+Using mime-types (1.16) 
+Using polyglot (0.3.1) 
+Using treetop (1.4.9) 
+Using mail (2.2.17) 
+Using actionmailer (3.0.5) 
+Using arel (2.0.9) 
+Using activerecord (3.0.5) 
+Using activeresource (3.0.5) 
+Installing bcrypt-ruby (2.1.4) with native extensions 
+Using bundler (1.0.7) 
+Using warden (0.10.7) 
+Installing devise (1.1.3) 
+Using mysql2 (0.2.7) 
+Using thor (0.14.6) 
+Using railties (3.0.5) 
+Using rails (3.0.5) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ bundle install[2Prails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 14:50:07] INFO  WEBrick 1.3.1
+[2011-04-22 14:50:07] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 14:50:07] INFO  WEBrick::HTTPServer#start: pid=6278 port=3000
+
+
+Started GET "/users/registration/sign_up" for 127.0.0.1 at 2011-04-22 14:50:14 +0530
+
+ActionController::RoutingError (No route matches "/users/registration/sign_up"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/users/registration/sign_up" for 127.0.0.1 at 2011-04-22 14:50:16 +0530
+
+ActionController::RoutingError (No route matches "/users/registration/sign_up"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/registration/sign_up" for 127.0.0.1 at 2011-04-22 14:50:19 +0530
+
+ActionController::RoutingError (No route matches "/users/registration/sign_up"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 14:50:35 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.7ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 57ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 14:50:53 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@yahoo.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Completed   in 337ms
+
+NameError (undefined local variable or method `confirmed_at' for #<User:0xb66dc70>):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (125.2ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (141.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-04-22 14:52:19 +0530
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-04-22 14:52:23 +0530
+
+ActionController::RoutingError (No route matches "/users"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 14:52:31 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (3.1ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 55ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 14:52:58 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@yahoo.com')) LIMIT 1
+  [1m[36mSQL (1.3ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `created_at`, `updated_at`) VALUES ('gaurav.midha@yahoo.com', '$2a$10$ol1xxLXJtUKvE3hApDZQa.9PWYBFWpX4QOU3vtzkOEwwajNzkGTMW', '$2a$10$ol1xxLXJtUKvE3hApDZQa.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-04-22 09:22:58', '2011-04-22 09:22:58')
+  [1m[36mSQL (50.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.8ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2011-04-22 09:22:58', `current_sign_in_at` = '2011-04-22 09:22:58', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-04-22 09:22:58' WHERE `users`.`id` = 1[0m
+  [1m[35mSQL (51.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 335ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 14:52:58 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 39ms (Views: 27.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2011-04-22 14:54:02 +0530
+
+ActionController::RoutingError (No route matches "/sign_out"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/sign-out" for 127.0.0.1 at 2011-04-22 14:54:06 +0530
+
+ActionController::RoutingError (No route matches "/sign-out"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/usser/sign-out" for 127.0.0.1 at 2011-04-22 14:54:17 +0530
+
+ActionController::RoutingError (No route matches "/usser/sign-out"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/user/sign-out" for 127.0.0.1 at 2011-04-22 14:54:23 +0530
+
+ActionController::RoutingError (No route matches "/user/sign-out"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/user/sign_out" for 127.0.0.1 at 2011-04-22 14:54:29 +0530
+
+ActionController::RoutingError (No route matches "/user/sign_out"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+^C[2011-04-22 14:54:34] INFO  going to shutdown ...
+[2011-04-22 14:54:34] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake routes
+(in /home/gaurav/rails/template_devise)
+      new_user_session GET    /users/sign_in(.:format)       {:action=>"new", :controller=>"devise/sessions"}
+          user_session POST   /users/sign_in(.:format)       {:action=>"create", :controller=>"devise/sessions"}
+  destroy_user_session GET    /users/sign_out(.:format)      {:action=>"destroy", :controller=>"devise/sessions"}
+         user_password POST   /users/password(.:format)      {:action=>"create", :controller=>"devise/passwords"}
+     new_user_password GET    /users/password/new(.:format)  {:action=>"new", :controller=>"devise/passwords"}
+    edit_user_password GET    /users/password/edit(.:format) {:action=>"edit", :controller=>"devise/passwords"}
+                       PUT    /users/password(.:format)      {:action=>"update", :controller=>"devise/passwords"}
+     user_registration POST   /users(.:format)               {:action=>"create", :controller=>"devise/registrations"}
+ new_user_registration GET    /users/sign_up(.:format)       {:action=>"new", :controller=>"devise/registrations"}
+edit_user_registration GET    /users/edit(.:format)          {:action=>"edit", :controller=>"devise/registrations"}
+                       PUT    /users(.:format)               {:action=>"update", :controller=>"devise/registrations"}
+                       DELETE /users(.:format)               {:action=>"destroy", :controller=>"devise/registrations"}
+              products GET    /products(.:format)            {:action=>"index", :controller=>"products"}
+                       POST   /products(.:format)            {:action=>"create", :controller=>"products"}
+           new_product GET    /products/new(.:format)        {:action=>"new", :controller=>"products"}
+          edit_product GET    /products/:id/edit(.:format)   {:action=>"edit", :controller=>"products"}
+               product GET    /products/:id(.:format)        {:action=>"show", :controller=>"products"}
+                       PUT    /products/:id(.:format)        {:action=>"update", :controller=>"products"}
+                       DELETE /products/:id(.:format)        {:action=>"destroy", :controller=>"products"}
+                  root        /(.:format)                    {:controller=>"products", :action=>"index"}
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake routesils server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 14:55:17] INFO  WEBrick 1.3.1
+[2011-04-22 14:55:17] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 14:55:17] INFO  WEBrick::HTTPServer#start: pid=6319 port=3000
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-04-22 14:55:24 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 174ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 14:55:25 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 78ms (Views: 66.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-04-22 14:55:40 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.4ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 54ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-04-22 14:55:53 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'gaurav.midha@yahoo.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `users` SET `current_sign_in_at` = '2011-04-22 09:25:53', `sign_in_count` = 2, `updated_at` = '2011-04-22 09:25:53' WHERE `users`.`id` = 1
+  [1m[36mSQL (62.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 298ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 14:55:53 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 36ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 15:00:57 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered products/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 75ms (Views: 62.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-04-22 15:01:21 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 15:01:21 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 55ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 15:01:30 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.3ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 53ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 15:01:57 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"vilok.aggarwal@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('vilok.aggarwal@yahoo.com')) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.7ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 220ms (Views: 26.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 15:02:22 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"vilok.aggarwal@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('vilok.aggarwal@yahoo.com')) LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  describe `users`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `created_at`, `updated_at`) VALUES ('vilok.aggarwal@yahoo.com', '$2a$10$afEufC3v4yD5q3AN3kJKZ.Kd81JBJong.GUotqfGQviNn/IulN7DG', '$2a$10$afEufC3v4yD5q3AN3kJKZ.', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-04-22 09:32:23', '2011-04-22 09:32:23')[0m
+  [1m[35mSQL (57.9ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-04-22 09:32:23', `current_sign_in_at` = '2011-04-22 09:32:23', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2011-04-22 09:32:23' WHERE `users`.`id` = 2
+  [1m[36mSQL (51.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 295ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 15:02:23 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+Rendered products/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 71ms (Views: 58.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-04-22 15:02:39 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 15:02:39 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 56ms (Views: 44.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-04-22 15:02:42 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.4ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/sessions/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 102ms (Views: 23.8ms | ActiveRecord: 111.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2011-04-22 15:02:51 +0530
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'gaurav.midha@yahoo.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2011-04-22 09:25:53', `current_sign_in_at` = '2011-04-22 09:32:52', `sign_in_count` = 3, `updated_at` = '2011-04-22 09:32:52' WHERE `users`.`id` = 1
+  [1m[36mSQL (52.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 230ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 15:02:52 +0530
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered products/index.html.erb within layouts/application (95.7ms)
+Completed 200 OK in 114ms (Views: 101.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2011-04-22 15:02:57 +0530
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 15:02:57 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 101ms (Views: 88.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 15:03:00 +0530
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.4ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 55ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 15:03:12 +0530
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@yahoo.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.4ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/registrations/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 198ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2011-04-22 15:04:11 +0530
+  Processing by Devise::PasswordsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.7ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/passwords/new.html.erb within layouts/application (72.5ms)
+Completed 200 OK in 98ms (Views: 80.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2011-04-22 15:04:20 +0530
+  Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'gaurav.midha@yahoo.com' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`reset_password_token` = 'ook4PnxnQ3nC1lplS-ob' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE `users` SET `reset_password_token` = 'ook4PnxnQ3nC1lplS-ob', `updated_at` = '2011-04-22 09:34:20' WHERE `users`.`id` = 1
+  [1m[36mSQL (53.9ms)[0m  [1mCOMMIT[0m
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/mailer/reset_password_instructions.html.erb (1.3ms)
+
+Sent mail to gaurav.midha@yahoo.com (94ms)
+Date: Fri, 22 Apr 2011 15:04:23 +0530
+From: please-change-me@config-initializers-devise.com
+To: gaurav.midha@yahoo.com
+Message-ID: <4db14b9f6549_18af57c55ba51645@gaurav-Inspiron-1525.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello gaurav.midha@yahoo.com!</p>
+
+<p>Someone has requested a link to change your password, and you can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=ook4PnxnQ3nC1lplS-ob">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2386ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-04-22 15:04:23 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (3.0ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 55ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+^C[2011-04-22 15:31:11] INFO  going to shutdown ...
+[2011-04-22 15:31:11] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ bundleinstall install
+Fetching source index for http://rubygems.org/
+Using rake (0.8.7) 
+Using abstract (1.0.0) 
+Using activesupport (3.0.5) 
+Using builder (2.1.2) 
+Using i18n (0.5.0) 
+Using activemodel (3.0.5) 
+Using erubis (2.6.6) 
+Using rack (1.2.2) 
+Using rack-mount (0.6.14) 
+Using rack-test (0.5.7) 
+Using tzinfo (0.3.26) 
+Using actionpack (3.0.5) 
+Using mime-types (1.16) 
+Using polyglot (0.3.1) 
+Using treetop (1.4.9) 
+Using mail (2.2.17) 
+Using actionmailer (3.0.5) 
+Using arel (2.0.9) 
+Using activerecord (3.0.5) 
+Using activeresource (3.0.5) 
+Installing addressable (2.2.4) 
+Using bcrypt-ruby (2.1.4) 
+Using bundler (1.0.7) 
+Using warden (0.10.7) 
+Using devise (1.1.3) 
+Installing multipart-post (1.1.0) 
+Installing faraday (0.6.1) 
+Installing multi_json (0.0.5) 
+Using mysql2 (0.2.7) 
+Installing net-ldap (0.1.1) 
+Installing nokogiri (1.4.4) with native extensions 
+Installing oa-core (0.2.4) 
+Installing rest-client (1.6.1) 
+Installing oa-basic (0.2.4) 
+Installing pyu-ruby-sasl (0.0.3.2) 
+Installing rubyntlm (0.1.1) 
+Installing oa-enterprise (0.2.4) 
+Installing oa-more (0.2.4) 
+Using oauth (0.4.4) 
+Installing oauth2 (0.4.1) 
+Installing oa-oauth (0.2.4) 
+Installing ruby-openid (2.1.8) 
+Installing rack-openid (1.2.0) 
+Installing ruby-openid-apps-discovery (1.2.0) 
+Installing oa-openid (0.2.4) 
+Installing omniauth (0.2.4) 
+Using thor (0.14.6) 
+Using railties (3.0.5) 
+Using rails (3.0.5) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ bundle install[2Prails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 15:56:11] INFO  WEBrick 1.3.1
+[2011-04-22 15:56:11] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 15:56:11] INFO  WEBrick::HTTPServer#start: pid=7042 port=3000
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2011-04-22 15:56:49 +0530
+  Processing by Devise::SessionsController#new as HTML
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/shared/_links.erb (2.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views/devise/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 44ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:01:08 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.7ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:01:25 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (73.7ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (81.9ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:09:50 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.9ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:10:04 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.3ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:10:11 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (66.2ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (75.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:10:15 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.7ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:10:20 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (72.5ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (80.6ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:10:27 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (30.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.9ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:11:48 +0530
+
+OAuth::Unauthorized (401 Unauthorized):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (78.1ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.1ms)
+^C[2011-04-22 16:12:02] INFO  going to shutdown ...
+[2011-04-22 16:12:03] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 16:12:11] INFO  WEBrick 1.3.1
+[2011-04-22 16:12:11] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 16:12:11] INFO  WEBrick::HTTPServer#start: pid=7168 port=3000
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:12:14 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=OGM9nFXZOron1oJk4Cs8nF3T0BKy1bpyYR3L0NX9D3M&oauth_verifier=rmUM3cdI9NOqEzvWDMOi9LtJKFMoKAxEOdtFGapw" for 127.0.0.1 at 2011-04-22 16:12:46 +0530
+
+ActionController::RoutingError (No route matches "/auth/twitter/callback"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+^C[2011-04-22 16:14:59] INFO  going to shutdown ...
+[2011-04-22 16:14:59] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ [K]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails b[Kgenerate scaffold aut hentication user_id:integer provider:string uid:string index [K[K[K[K[K[K[K
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20110422104647_create_authentications.rb
+[1m[32m      create[0m    app/models/authentication.rb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/unit/authentication_test.rb
+[1m[32m      create[0m      test/fixtures/authentications.yml
+[1m[32m       route[0m  resources :authentications
+[1m[37m      invoke[0m  scaffold_controller
+[1m[32m      create[0m    app/controllers/authentications_controller.rb
+[1m[37m      invoke[0m    erb
+[1m[32m      create[0m      app/views/authentications
+[1m[32m      create[0m      app/views/authentications/index.html.erb
+[1m[32m      create[0m      app/views/authentications/edit.html.erb
+[1m[32m      create[0m      app/views/authentications/show.html.erb
+[1m[32m      create[0m      app/views/authentications/new.html.erb
+[1m[32m      create[0m      app/views/authentications/_form.html.erb
+[1m[37m      invoke[0m    test_unit
+[1m[32m      create[0m      test/functional/authentications_controller_test.rb
+[1m[37m      invoke[0m    helper
+[1m[32m      create[0m      app/helpers/authentications_helper.rb
+[1m[37m      invoke[0m      test_unit
+[1m[32m      create[0m        test/unit/helpers/authentications_helper_test.rb
+[1m[37m      invoke[0m  stylesheets
+[1m[34m   identical[0m    public/stylesheets/scaffold.css
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake db:migrate
+(in /home/gaurav/rails/template_devise)
+==  CreateAuthentications: migrating ==========================================
+-- create_table(:authentications)
+   -> 0.1376s
+==  CreateAuthentications: migrated (0.1378s) =================================
+
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rake db:migrateils generate scaffold authhentication user_id:integer provider:string uid:string[A[C[C[C[C[Cserver[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 16:33:32] INFO  WEBrick 1.3.1
+[2011-04-22 16:33:32] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 16:33:32] INFO  WEBrick::HTTPServer#start: pid=7302 port=3000
+
+
+Started GET "/auth/twitter/%5C" for 127.0.0.1 at 2011-04-22 16:33:34 +0530
+
+ActionController::RoutingError (No route matches "/auth/twitter/%5C"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:33:36 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=jbKVifT4oOmSpkB12QZlQ9XkhOiEIfICRlJcmFDa3w&oauth_verifier=wYqk83XQzG1Cd4wc0kxtppgwkK7bRSeAVoigsPyz8" for 127.0.0.1 at 2011-04-22 16:33:38 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"jbKVifT4oOmSpkB12QZlQ9XkhOiEIfICRlJcmFDa3w", "oauth_verifier"=>"wYqk83XQzG1Cd4wc0kxtppgwkK7bRSeAVoigsPyz8", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:34:02 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=JsLFS0AIhNmyLIZQnTjKyrrauEuSoCHWR19mi02do&oauth_verifier=cOtFrdPPFZjeJ93rSnyIl3fXJDeEXObAkXOKeFNJ0c" for 127.0.0.1 at 2011-04-22 16:34:05 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"JsLFS0AIhNmyLIZQnTjKyrrauEuSoCHWR19mi02do", "oauth_verifier"=>"cOtFrdPPFZjeJ93rSnyIl3fXJDeEXObAkXOKeFNJ0c", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:35:06 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=iuPntvA0GFJohaeQHMpswvdKSRXoM8HLvMu8EBg9M&oauth_verifier=vd9vbjvRVAiGHb4mHPFORVkSylJ4IBhwDLASdDo" for 127.0.0.1 at 2011-04-22 16:35:34 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"iuPntvA0GFJohaeQHMpswvdKSRXoM8HLvMu8EBg9M", "oauth_verifier"=>"vd9vbjvRVAiGHb4mHPFORVkSylJ4IBhwDLASdDo", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:39:59 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=TVd91bIMCQ24nlFFjyxMOOKqPFEskXkO9RZbvE1s9Vg&oauth_verifier=dTKu2i7icxJNmrzEka0JZM3djfNp3NmThXtrTRMs" for 127.0.0.1 at 2011-04-22 16:40:15 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"TVd91bIMCQ24nlFFjyxMOOKqPFEskXkO9RZbvE1s9Vg", "oauth_verifier"=>"dTKu2i7icxJNmrzEka0JZM3djfNp3NmThXtrTRMs", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:43:04 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=cvrRQIER9En5zIOrmEznt3809jVtUDcdkLf8YZrD2mg&oauth_verifier=pIOVPVlUlq3gyyJL6RrUsSsNpzDlKvp8iHechcoM" for 127.0.0.1 at 2011-04-22 16:43:06 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"cvrRQIER9En5zIOrmEznt3809jVtUDcdkLf8YZrD2mg", "oauth_verifier"=>"pIOVPVlUlq3gyyJL6RrUsSsNpzDlKvp8iHechcoM", "provider"=>"twitter"}
+Completed   in 18ms
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 16:43:09 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:43:58 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=aYkZkvpx3UWedKo96Mv086VtWV9B3fGUjJ2NHdpib4&oauth_verifier=Qt3pT68TRJKfGqM3r5CWdLAF8z0TfW4kGSieGsBHZ0" for 127.0.0.1 at 2011-04-22 16:44:01 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"aYkZkvpx3UWedKo96Mv086VtWV9B3fGUjJ2NHdpib4", "oauth_verifier"=>"Qt3pT68TRJKfGqM3r5CWdLAF8z0TfW4kGSieGsBHZ0", "provider"=>"twitter"}
+Completed   in 19ms
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 16:44:04 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.5ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:44:44 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=SSZlXF47WdknpQSJljKX9nYj5hNzFLBCGc27tRov0&oauth_verifier=rCtRcmnfo32PdKTDmnCHaMbmyWTPXmybbsbg1O48" for 127.0.0.1 at 2011-04-22 16:44:58 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"SSZlXF47WdknpQSJljKX9nYj5hNzFLBCGc27tRov0", "oauth_verifier"=>"rCtRcmnfo32PdKTDmnCHaMbmyWTPXmybbsbg1O48", "provider"=>"twitter"}
+Completed   in 18ms
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 16:45:01 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:45:45 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=FaQw53By42BhUamTJzIbiKTGwgOMo5ACrCBfMghxD0&oauth_verifier=myVy6yXUTX67kBo26igYnGLFYlPxB4QHHjsUxvdk" for 127.0.0.1 at 2011-04-22 16:45:47 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"FaQw53By42BhUamTJzIbiKTGwgOMo5ACrCBfMghxD0", "oauth_verifier"=>"myVy6yXUTX67kBo26igYnGLFYlPxB4QHHjsUxvdk", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:53:02 +0530
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:53:09 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=PHQcG7PrcPnUvrSvWaq0PWSZLt1nbJ3aGsvJ5eLg3g&oauth_verifier=aNw0FvR4r6AYaflu2pTtceeEg17d59dYPgaQBNXE" for 127.0.0.1 at 2011-04-22 16:53:12 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"PHQcG7PrcPnUvrSvWaq0PWSZLt1nbJ3aGsvJ5eLg3g", "oauth_verifier"=>"aNw0FvR4r6AYaflu2pTtceeEg17d59dYPgaQBNXE", "provider"=>"twitter"}
+Completed   in 18ms
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 16:53:15 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 16:54:55 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:55:06 +0530
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:55:08 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=PmIBz9zJChL17RRxQW5K6j4ZdfvhD8NapgvIo2hK7w&oauth_verifier=ttPs154lb8SsrCKJEdOhXFEcSlYIgwsPdD3R5iE88" for 127.0.0.1 at 2011-04-22 16:55:11 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"PmIBz9zJChL17RRxQW5K6j4ZdfvhD8NapgvIo2hK7w", "oauth_verifier"=>"ttPs154lb8SsrCKJEdOhXFEcSlYIgwsPdD3R5iE88", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:57:46 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:57:48 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8", "oauth_verifier"=>"oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs", "provider"=>"twitter"}
+Completed   in 83ms
+
+ActionView::MissingTemplate (Missing template authentications/twitter with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/gaurav/rails/template_devise/app/views", "/home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views"):
+  app/controllers/authentications_controller.rb:19:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.2ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:58:43 +0530
+
+
+Started GET "/auth/failure?message=invalid_credentials" for 127.0.0.1 at 2011-04-22 16:58:47 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:58:50 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:58:52 +0530
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:58:59 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=tBdl4bEYCZh0wdlg65nD1Vg6RFSxzJMs1VL4vpq8G8&oauth_verifier=OvHDKMvyBKVgHLutzqSPdF1AXkmcPGQpfKHHeZcgG4" for 127.0.0.1 at 2011-04-22 16:59:02 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"tBdl4bEYCZh0wdlg65nD1Vg6RFSxzJMs1VL4vpq8G8", "oauth_verifier"=>"OvHDKMvyBKVgHLutzqSPdF1AXkmcPGQpfKHHeZcgG4", "provider"=>"twitter"}
+Completed   in 9ms
+
+ActionView::MissingTemplate (Missing template authentications/--- twitter
+ with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/home/gaurav/rails/template_devise/app/views", "/home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/devise-1.1.3/app/views"):
+  app/controllers/authentications_controller.rb:19:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.2ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:33 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:34 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:36 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:38 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:39 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:46 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:47 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:48 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:50 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=MlXeSefCMkzKlrrYNmDldI78rrr405c3tPg1eb9Cjq8&oauth_verifier=oddXLIaezKgbuO3GvPU7DGcwdVA8PA9cFz7xl5YfJs" for 127.0.0.1 at 2011-04-22 16:59:51 +0530
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 16:59:53 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=r0nvkJwpFr6QUptDSZz8c7Mra9FW4RIWxM9JIIy6FM&oauth_verifier=S9RsdzZtmnfbTXVuyTam3WU644wS5xGNnUj7yfN0aY" for 127.0.0.1 at 2011-04-22 16:59:56 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"r0nvkJwpFr6QUptDSZz8c7Mra9FW4RIWxM9JIIy6FM", "oauth_verifier"=>"S9RsdzZtmnfbTXVuyTam3WU644wS5xGNnUj7yfN0aY", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=r0nvkJwpFr6QUptDSZz8c7Mra9FW4RIWxM9JIIy6FM&oauth_verifier=S9RsdzZtmnfbTXVuyTam3WU644wS5xGNnUj7yfN0aY" for 127.0.0.1 at 2011-04-22 17:00:34 +0530
+
+
+Started GET "/auth/failure?message=invalid_credentials" for 127.0.0.1 at 2011-04-22 17:00:36 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 17:00:41 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=4Hl97eEZEzhZOjRzPp1TSotdRR35QyFrDV8qk3WXhNY&oauth_verifier=c6r2MVgdiMqFZll3SuoDiHNNmTj5HOiOAqorDJqAo" for 127.0.0.1 at 2011-04-22 17:00:44 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"4Hl97eEZEzhZOjRzPp1TSotdRR35QyFrDV8qk3WXhNY", "oauth_verifier"=>"c6r2MVgdiMqFZll3SuoDiHNNmTj5HOiOAqorDJqAo", "provider"=>"twitter"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: The I18n message 'devise.mailer.confirmation_instructions' is deprecated. Please use 'devise.mailer.confirmation_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.reset_password_instructions' is deprecated. Please use 'devise.mailer.reset_password_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.unlock_instructions' is deprecated. Please use 'devise.mailer.unlock_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 17:13:23 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=6unbKf6iVM5vc8Vs19PvGoWJtTJLx2q4EzybOW3G4&oauth_verifier=i7p5Kn4Y2HBryl7dHevWBC0c8q8KaZJjSO4LXDxIg" for 127.0.0.1 at 2011-04-22 17:13:27 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"6unbKf6iVM5vc8Vs19PvGoWJtTJLx2q4EzybOW3G4", "oauth_verifier"=>"i7p5Kn4Y2HBryl7dHevWBC0c8q8KaZJjSO4LXDxIg", "provider"=>"twitter"}
+Completed   in 20ms
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 17:14:24 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 17:14:30 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=dh5y38YQMPYtrvIzQlqk7AaqOGh52UY2l0la8nlk&oauth_verifier=7Ext3zDrjNuHPN2oXZBDtMGlBVYmb5ZB4mz6tJsbQI" for 127.0.0.1 at 2011-04-22 17:14:33 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"dh5y38YQMPYtrvIzQlqk7AaqOGh52UY2l0la8nlk", "oauth_verifier"=>"7Ext3zDrjNuHPN2oXZBDtMGlBVYmb5ZB4mz6tJsbQI", "provider"=>"twitter"}
+Completed   in 139ms
+
+NameError (undefined local variable or method `authentications' for #<AuthenticationsController:0xa75df8c>):
+  app/controllers/authentications_controller.rb:29:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (212.5ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (223.5ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 17:15:07 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=M1ii79mvzzH4l4aGyWkuDJEMl1Rs5gT3yn29Qym294&oauth_verifier=w1dQqKjYxgIkCEflmlKyOIRPIyttFdCDTRxdfuNV3RA" for 127.0.0.1 at 2011-04-22 17:15:10 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"M1ii79mvzzH4l4aGyWkuDJEMl1Rs5gT3yn29Qym294", "oauth_verifier"=>"w1dQqKjYxgIkCEflmlKyOIRPIyttFdCDTRxdfuNV3RA", "provider"=>"twitter"}
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `authentications`[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `authentications` (`user_id`, `provider`, `uid`, `created_at`, `updated_at`) VALUES (NULL, 'twitter', '280894561', '2011-04-22 11:45:13', '2011-04-22 11:45:13')
+  [1m[36mSQL (53.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/authentications
+Completed 302 Found in 275ms
+
+
+Started GET "/authentications" for 127.0.0.1 at 2011-04-22 17:15:13 +0530
+  Processing by AuthenticationsController#index as HTML
+  [1m[35mAuthentication Load (0.4ms)[0m  SELECT `authentications`.* FROM `authentications`
+Rendered authentications/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 56ms (Views: 41.4ms | ActiveRecord: 55.7ms)
+DEPRECATION WARNING: The I18n message 'devise.mailer.confirmation_instructions' is deprecated. Please use 'devise.mailer.confirmation_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.reset_password_instructions' is deprecated. Please use 'devise.mailer.reset_password_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.unlock_instructions' is deprecated. Please use 'devise.mailer.unlock_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 18:08:53 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 111ms (Views: 47.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-22 18:09:02 +0530
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 135ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 18:28:41 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=7c5RGeIRiJl16GfsPScNMUI1IB3hcCpsBeI6IINiikI&oauth_verifier=aIvAfBIFC8U3Plh2niMZE1xL1cPdK7bMGatbzspM" for 127.0.0.1 at 2011-04-22 18:28:46 +0530
+
+SyntaxError (/home/gaurav/rails/template_devise/app/controllers/authentications_controller.rb:56: syntax error, unexpected keyword_end, expecting $end):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (104.0ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (113.9ms)
+
+
+Started GET "/auth/twitter/callback?oauth_token=7c5RGeIRiJl16GfsPScNMUI1IB3hcCpsBeI6IINiikI&oauth_verifier=aIvAfBIFC8U3Plh2niMZE1xL1cPdK7bMGatbzspM" for 127.0.0.1 at 2011-04-22 18:31:41 +0530
+
+
+Started GET "/auth/failure?message=invalid_credentials" for 127.0.0.1 at 2011-04-22 18:31:43 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 18:31:56 +0530
+
+
+Started GET "/auth/twitter/callback?oauth_token=mcocouZk2nr9KEszjHKONwlMTESyWlyryFBqskS3c&oauth_verifier=SQV1UBmWtHANeGJcgcTqcY1Jn7H2cemqsplioLZyyk" for 127.0.0.1 at 2011-04-22 18:32:01 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"mcocouZk2nr9KEszjHKONwlMTESyWlyryFBqskS3c", "oauth_verifier"=>"SQV1UBmWtHANeGJcgcTqcY1Jn7H2cemqsplioLZyyk", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.5ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+Completed   in 28ms
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 18:38:49 +0530
+1
+
+
+Started GET "/auth/twitter/callback?oauth_token=NQbvjGntSqWjeix3sMgRZFSRYW3YiGqzqeTiVS6VU&oauth_verifier=WeF680HRTy8OoJIL9HVBRXHr4bkXFrg5zpRcF5gg" for 127.0.0.1 at 2011-04-22 18:38:53 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"NQbvjGntSqWjeix3sMgRZFSRYW3YiGqzqeTiVS6VU", "oauth_verifier"=>"WeF680HRTy8OoJIL9HVBRXHr4bkXFrg5zpRcF5gg", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+Completed   in 18ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 18:39:08 +0530
+1
+
+
+Started GET "/auth/twitter/callback?oauth_token=Iys0B6q85x4NVx6WqGN4yqdF0C2nWJlvhXFjRaZJGII&oauth_verifier=Pf0UeOBKPNf8GnyU3XtSPVbRU96NmsZcsjpMwh38BKk" for 127.0.0.1 at 2011-04-22 18:39:11 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"Iys0B6q85x4NVx6WqGN4yqdF0C2nWJlvhXFjRaZJGII", "oauth_verifier"=>"Pf0UeOBKPNf8GnyU3XtSPVbRU96NmsZcsjpMwh38BKk", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+Completed   in 18ms
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 18:42:45 +0530
+3
+
+
+Started GET "/auth/twitter/callback?oauth_token=lxPVHzvpN4imY9pRSqeWX3CA47QKQiKC2OoQhBws&oauth_verifier=fq5o2eRJpPb6ZEAwT7CHJ6gzBcuu0hofQ01pbTmuI" for 127.0.0.1 at 2011-04-22 18:42:48 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"lxPVHzvpN4imY9pRSqeWX3CA47QKQiKC2OoQhBws", "oauth_verifier"=>"fq5o2eRJpPb6ZEAwT7CHJ6gzBcuu0hofQ01pbTmuI", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.4ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Completed   in 72ms
+
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank, Password can't be blank):
+  app/controllers/authentications_controller.rb:43:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (287.5ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (298.6ms)
+DEPRECATION WARNING: The I18n message 'devise.mailer.confirmation_instructions' is deprecated. Please use 'devise.mailer.confirmation_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.reset_password_instructions' is deprecated. Please use 'devise.mailer.reset_password_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.unlock_instructions' is deprecated. Please use 'devise.mailer.unlock_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.confirmation_instructions' is deprecated. Please use 'devise.mailer.confirmation_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.reset_password_instructions' is deprecated. Please use 'devise.mailer.reset_password_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+DEPRECATION WARNING: The I18n message 'devise.mailer.unlock_instructions' is deprecated. Please use 'devise.mailer.unlock_instructions.subject' instead. (called from <top (required)> at /home/gaurav/rails/template_devise/config/environment.rb:5)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:38:57 +0530
+3
+
+
+Started GET "/auth/twitter/callback?oauth_token=FbnMR0FZIodvGpMlOmRxrDI9xdph5aeG83mzMYXLew&oauth_verifier=v4Y3mkjMWtDh3NzUYwAWddSJ7Zghiduo1v9xCmyas" for 127.0.0.1 at 2011-04-22 19:39:01 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"FbnMR0FZIodvGpMlOmRxrDI9xdph5aeG83mzMYXLew", "oauth_verifier"=>"v4Y3mkjMWtDh3NzUYwAWddSJ7Zghiduo1v9xCmyas", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+Completed   in 101ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/models/user.rb:8:in `apply_omniauth'
+  app/controllers/authentications_controller.rb:42:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (241.0ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (253.0ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:39:46 +0530
+3
+
+
+Started GET "/auth/twitter/callback?oauth_token=ifTwfx6WYJ4E89FfIxAXgRiu187K1GktKCkLQ5CFj0&oauth_verifier=7lUlItMKgTmGdD09LEy2RCZG2BLaD8er3rLV93m4ksk" for 127.0.0.1 at 2011-04-22 19:39:48 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"ifTwfx6WYJ4E89FfIxAXgRiu187K1GktKCkLQ5CFj0", "oauth_verifier"=>"7lUlItMKgTmGdD09LEy2RCZG2BLaD8er3rLV93m4ksk", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+Completed   in 109ms
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:42:51 +0530
+3
+
+
+Started GET "/auth/twitter/callback?oauth_token=ck0z602Y6KcmPsnMTwudVccwj6M8WTgSVJLvDdhrDw&oauth_verifier=5vWlQ40Fl1X0m5avR9byfCvoksyX71vbFP9lenUkiII" for 127.0.0.1 at 2011-04-22 19:42:55 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"ck0z602Y6KcmPsnMTwudVccwj6M8WTgSVJLvDdhrDw", "oauth_verifier"=>"5vWlQ40Fl1X0m5avR9byfCvoksyX71vbFP9lenUkiII", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+Completed   in 52ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:44:22 +0530
+3
+
+
+Started GET "/auth/twitter/callback?oauth_token=Nru6WL2VyqX4mKm2jB3KTvb6yYHU2MnOfTnCxuPSkoo&oauth_verifier=TNBVGov3zHMylYZfoe8AwUtGqBtOuE0nYPncwRtQM" for 127.0.0.1 at 2011-04-22 19:44:25 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"Nru6WL2VyqX4mKm2jB3KTvb6yYHU2MnOfTnCxuPSkoo", "oauth_verifier"=>"TNBVGov3zHMylYZfoe8AwUtGqBtOuE0nYPncwRtQM", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+Completed   in 131ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:46:24 +0530
+3
+4
+
+
+Started GET "/auth/twitter/callback?oauth_token=ADhnLDJJXjtA4mQZYtCcZreoLpfCfqAmNHTBWPmjxKk&oauth_verifier=zVMeYwuS9Lxk4ARjDLlER99ATIvT8ochFDJWxstaA" for 127.0.0.1 at 2011-04-22 19:46:27 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"ADhnLDJJXjtA4mQZYtCcZreoLpfCfqAmNHTBWPmjxKk", "oauth_verifier"=>"zVMeYwuS9Lxk4ARjDLlER99ATIvT8ochFDJWxstaA", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+Completed   in 52ms
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:47:29 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa6a5e28 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa6cd950 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa6a57e8 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+
+
+Started GET "/auth/twitter/callback?oauth_token=AYFjAw6ArKcFmwC1RU141LMpkcG91WdM6DLUaTc0Nk&oauth_verifier=uUiaJ4EaFULGXuDWtmmgTCJfRRG59x6QNvXz5QqY8M" for 127.0.0.1 at 2011-04-22 19:47:32 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"AYFjAw6ArKcFmwC1RU141LMpkcG91WdM6DLUaTc0Nk", "oauth_verifier"=>"uUiaJ4EaFULGXuDWtmmgTCJfRRG59x6QNvXz5QqY8M", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+Completed   in 53ms
+
+
+Started GET "/auth/failure?message=invalid_response" for 127.0.0.1 at 2011-04-22 19:48:53 +0530
+
+ActionController::RoutingError (No route matches "/auth/failure"):
+  
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:49:04 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0x9bd6c90 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0x9c4503c @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0x9bce478 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+
+
+Started GET "/auth/twitter/callback?oauth_token=azWwjSsDbysN3sHgNffvXVMf0B3PbL2WpEqteGkxm8&oauth_verifier=7xIpbrZLst9hyGC1UDNeHyp01eiQkh67Xxa9DDa7No" for 127.0.0.1 at 2011-04-22 19:49:08 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"azWwjSsDbysN3sHgNffvXVMf0B3PbL2WpEqteGkxm8", "oauth_verifier"=>"7xIpbrZLst9hyGC1UDNeHyp01eiQkh67Xxa9DDa7No", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+Completed   in 58ms
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:51:10 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa75f440 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa77996c @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa75efb8 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+
+
+Started GET "/auth/twitter/callback?oauth_token=5A5VxSBCCcH0nCodR8RHAKA65VIRijlQaD22ljcgBY&oauth_verifier=rCiRQxJIfWd2QaEqPlMbHo06Wdw9d4F50gVo4ONn9c" for 127.0.0.1 at 2011-04-22 19:51:13 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"5A5VxSBCCcH0nCodR8RHAKA65VIRijlQaD22ljcgBY", "oauth_verifier"=>"rCiRQxJIfWd2QaEqPlMbHo06Wdw9d4F50gVo4ONn9c", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+Completed   in 53ms
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:52:45 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0x9ed084c @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa52cb00 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0x9ecff28 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+11
+5
+
+
+Started GET "/auth/twitter/callback?oauth_token=Xdllobt6ikNFoty155iRIFExxWwD4kyIyDDjuYm6E4&oauth_verifier=2Oc0REMBjTAtzSQbmmWzQ1BW0LO7wXbmbbN0WVXUg" for 127.0.0.1 at 2011-04-22 19:52:48 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"Xdllobt6ikNFoty155iRIFExxWwD4kyIyDDjuYm6E4", "oauth_verifier"=>"2Oc0REMBjTAtzSQbmmWzQ1BW0LO7wXbmbbN0WVXUg", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Completed   in 122ms
+
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank, Password can't be blank):
+  app/controllers/authentications_controller.rb:46:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (247.5ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (258.9ms)
+^C[2011-04-22 19:58:05] INFO  going to shutdown ...
+[2011-04-22 19:58:05] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 19:58:13] INFO  WEBrick 1.3.1
+[2011-04-22 19:58:13] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 19:58:13] INFO  WEBrick::HTTPServer#start: pid=9658 port=3000
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 19:58:20 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa975a7c @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa99da18 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa975658 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+11
+5
+
+
+Started GET "/auth/twitter/callback?oauth_token=h9T0ZXyYODNgJZpm4yUDNfo6zmO5LW49jZ51uxk0M&oauth_verifier=kC4AoU9FHGeBO1PX6FpGcZNlXNwmDlGZb1qIDVgE" for 127.0.0.1 at 2011-04-22 19:58:23 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"h9T0ZXyYODNgJZpm4yUDNfo6zmO5LW49jZ51uxk0M", "oauth_verifier"=>"kC4AoU9FHGeBO1PX6FpGcZNlXNwmDlGZb1qIDVgE", "provider"=>"twitter"}
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAuthentication Load (0.3ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Completed   in 272ms
+
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank, Password can't be blank):
+  app/controllers/authentications_controller.rb:46:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (241.2ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (286.8ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:00:27 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xab65828 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xab79530 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xab65364 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+11
+5
+7
+
+
+Started GET "/auth/twitter/callback?oauth_token=BchsX2gtSK2mU4qgTkYx6LKgVaWRHxUbkoyTKfytl8&oauth_verifier=c8jjzO5YOjvht4oz2KxxnTJOJ2hfNohBrarVSNe1qM" for 127.0.0.1 at 2011-04-22 20:00:29 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"BchsX2gtSK2mU4qgTkYx6LKgVaWRHxUbkoyTKfytl8", "oauth_verifier"=>"c8jjzO5YOjvht4oz2KxxnTJOJ2hfNohBrarVSNe1qM", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Completed   in 270ms
+
+NameError (undefined local variable or method `omniauth' for #<AuthenticationsController:0xaadbd08>):
+  app/controllers/authentications_controller.rb:52:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (237.8ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (282.8ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:01:17 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xab6cc7c @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xab84638 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xab6c600 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+11
+5
+7
+
+
+Started GET "/auth/twitter/callback?oauth_token=pE6Q5bBQ3xVr12U1SDA1pYRixudu2oAvFWjMdIXo&oauth_verifier=Cv3an3TyIRyZPcDnwin8wI5Bux3xQSiAixWI" for 127.0.0.1 at 2011-04-22 20:01:20 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"pE6Q5bBQ3xVr12U1SDA1pYRixudu2oAvFWjMdIXo", "oauth_verifier"=>"Cv3an3TyIRyZPcDnwin8wI5Bux3xQSiAixWI", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Completed   in 255ms
+
+NameError (undefined local variable or method `new_user_registration' for #<AuthenticationsController:0xaadf354>):
+  app/controllers/authentications_controller.rb:53:in `create'
+
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (238.2ms)
+Rendered /home/gaurav/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (249.7ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:02:12 +0530
+3
+4
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa94a908 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa96ebc8 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa94a46c URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+11
+5
+7
+
+
+Started GET "/auth/twitter/callback?oauth_token=sdvXc21FuCpbuQCSxKVCFpx7RLqnXZeC4wgCFWsag&oauth_verifier=snYQVIn94OZSoVkH0HQddZ2VFoqC2RicfVVY2bnVQ" for 127.0.0.1 at 2011-04-22 20:02:15 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"sdvXc21FuCpbuQCSxKVCFpx7RLqnXZeC4wgCFWsag", "oauth_verifier"=>"snYQVIn94OZSoVkH0HQddZ2VFoqC2RicfVVY2bnVQ", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 140ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:05:08 +0530
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa9f5060 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xaa164cc @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa9f4b88 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+10
+twitter
+280894561
+11
+
+
+Started GET "/auth/twitter/callback?oauth_token=aUxc0eWjCzsvCpP5NNKheHbjaTlVRjmbREBCWaRM3SY&oauth_verifier=AUY6FHDcTNPfLr2azDzltThUTjCWpUYOvdrW6A1lQ" for 127.0.0.1 at 2011-04-22 20:05:11 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"aUxc0eWjCzsvCpP5NNKheHbjaTlVRjmbREBCWaRM3SY", "oauth_verifier"=>"AUY6FHDcTNPfLr2azDzltThUTjCWpUYOvdrW6A1lQ", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 75ms
+
+
+
+
+
+
+
+
+
+
+
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:06:01 +0530
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa0465c8 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa0d1650 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa044f84 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+twitter
+280894561
+
+
+Started GET "/auth/twitter/callback?oauth_token=lCXgox8sKsU2DBkP5YWwf1GONqImazE52cfCycnPX8&oauth_verifier=zyYEWOwTDPF6GyRMkXAE8raiK5coxqEj8rMd5dwDQ" for 127.0.0.1 at 2011-04-22 20:06:04 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"lCXgox8sKsU2DBkP5YWwf1GONqImazE52cfCycnPX8", "oauth_verifier"=>"zyYEWOwTDPF6GyRMkXAE8raiK5coxqEj8rMd5dwDQ", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 79ms
+11
+12
+13
+14
+15
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 20:08:32 +0530
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Rendered devise/shared/_links.erb (2.5ms)
+Rendered registrations/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 162ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:17:04 +0530
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xaa34f58 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xaa56478 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xaa34a30 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+
+
+Started GET "/auth/twitter/callback?oauth_token=Bi76FvUESx5zkcG4ra8TRxtWn5dsSL5HlaM9Yhbv84&oauth_verifier=uiwvX3g3V3NRkY1QpiBiS5CJmQ9rk6pmIUmy2k8u7iI" for 127.0.0.1 at 2011-04-22 20:17:07 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"Bi76FvUESx5zkcG4ra8TRxtWn5dsSL5HlaM9Yhbv84", "oauth_verifier"=>"uiwvX3g3V3NRkY1QpiBiS5CJmQ9rk6pmIUmy2k8u7iI", "provider"=>"twitter"}
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 73ms
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:26:51 +0530
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xa9a2a04 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xa9b3e44 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xa9a25e0 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+
+
+Started GET "/auth/twitter/callback?oauth_token=B5Tc8xc2tJq1FIvDJ9P6KrCI4L3bg81BMsTsXVuSu0&oauth_verifier=KsSvgSk4tg8QwiPKX88SNspHOUfaW6zXtAqDm69pU8" for 127.0.0.1 at 2011-04-22 20:26:56 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"B5Tc8xc2tJq1FIvDJ9P6KrCI4L3bg81BMsTsXVuSu0", "oauth_verifier"=>"KsSvgSk4tg8QwiPKX88SNspHOUfaW6zXtAqDm69pU8", "provider"=>"twitter"}
+  [1m[36mAuthentication Load (0.2ms)[0m  [1mSELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 72ms
+^C[2011-04-22 20:27:10] INFO  going to shutdown ...
+[2011-04-22 20:27:10] INFO  WEBrick::HTTPServer#start done.
+Exiting
+]0;gaurav@gaurav-Inspiron-1525: ~/rails/template_devisegaurav@gaurav-Inspiron-1525:~/rails/template_devise$ rails server
+=> Booting WEBrick
+=> Rails 3.0.5 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[WARNING] config.encryptor is not set in your config/initializers/devise.rb. Devise will then set it to :bcrypt. If you were using the previous default encryptor, please add config.encryptor = :sha1 to your configuration file.
+[2011-04-22 20:27:18] INFO  WEBrick 1.3.1
+[2011-04-22 20:27:18] INFO  ruby 1.9.2 (2010-12-25) [i686-linux]
+[2011-04-22 20:27:18] INFO  WEBrick::HTTPServer#start: pid=9932 port=3000
+
+
+Started GET "/auth/twitter/" for 127.0.0.1 at 2011-04-22 20:27:23 +0530
+{"provider"=>"twitter", "uid"=>"280894561", "credentials"=>{"token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk"}, "extra"=>{"access_token"=>#<OAuth::AccessToken:0xacb1074 @token="280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", @secret="LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", @consumer=#<OAuth::Consumer:0xacd9060 @key="KEyXWGPFbn4M0RrCNaRw", @secret="FwI9CCLiNY9n9yI7XK5N7L9QdlfyjyLp2wclSwrd1Y", @options={:signature_method=>"HMAC-SHA1", :request_token_path=>"/oauth/request_token", :authorize_path=>"/oauth/authenticate", :access_token_path=>"/oauth/access_token", :proxy=>nil, :scheme=>:header, :http_method=>:post, :oauth_version=>"1.0", :site=>"https://api.twitter.com"}, @http=#<Net::HTTP api.twitter.com:443 open=false>, @http_method=:post, @uri=#<URI::HTTPS:0xacb0c14 URL:https://api.twitter.com>>, @params={:oauth_token=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", "oauth_token"=>"280894561-BvZzpLPrMQGXupPCqhPb1lKNIPDIB2nbPMGItdNJ", :oauth_token_secret=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", "oauth_token_secret"=>"LAxXFnPuDGDGTCx4lbJpoJBMJN6OtE0O1z47WSfsk", :user_id=>"280894561", "user_id"=>"280894561", :screen_name=>"midha_gaurav", "screen_name"=>"midha_gaurav"}, @response=#<Net::HTTPOK 200 OK readbody=true>>, "user_hash"=>{"statuses_count"=>0, "verified"=>false, "id_str"=>"280894561", "default_profile"=>true, "notifications"=>false, "profile_text_color"=>"333333", "url"=>nil, "description"=>nil, "follow_request_sent"=>false, "profile_sidebar_fill_color"=>"DDEEF6", "following"=>false, "profile_background_tile"=>false, "profile_image_url"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "location"=>nil, "is_translator"=>false, "time_zone"=>nil, "profile_link_color"=>"0084B4", "screen_name"=>"midha_gaurav", "listed_count"=>0, "profile_sidebar_border_color"=>"C0DEED", "followers_count"=>0, "favourites_count"=>0, "created_at"=>"Tue Apr 12 07:03:24 +0000 2011", "friends_count"=>0, "protected"=>false, "show_all_inline_media"=>false, "geo_enabled"=>false, "profile_use_background_image"=>true, "name"=>"Gaurav Midha", "contributors_enabled"=>false, "lang"=>"en", "profile_background_color"=>"C0DEED", "id"=>280894561, "default_profile_image"=>true, "profile_background_image_url"=>"http://a3.twimg.com/a/1302541726/images/themes/theme1/bg.png", "utc_offset"=>nil}}, "user_info"=>{"nickname"=>"midha_gaurav", "name"=>"Gaurav Midha", "location"=>nil, "image"=>"http://a0.twimg.com/sticky/default_profile_images/default_profile_3_normal.png", "description"=>nil, "urls"=>{"Website"=>nil, "Twitter"=>"http://twitter.com/midha_gaurav"}}}
+
+
+Started GET "/auth/twitter/callback?oauth_token=6WzW9OKfaRNylHHnHnnpzTKxKP7HRoGNZDy4ApyvA&oauth_verifier=TVozJZqUZw2VP0qJmWSFsWvLZXeHFQ1joWKuGev8Y0" for 127.0.0.1 at 2011-04-22 20:27:31 +0530
+  Processing by AuthenticationsController#create as HTML
+  Parameters: {"oauth_token"=>"6WzW9OKfaRNylHHnHnnpzTKxKP7HRoGNZDy4ApyvA", "oauth_verifier"=>"TVozJZqUZw2VP0qJmWSFsWvLZXeHFQ1joWKuGev8Y0", "provider"=>"twitter"}
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mAuthentication Load (0.2ms)[0m  SELECT `authentications`.* FROM `authentications` WHERE `authentications`.`provider` = 'twitter' AND `authentications`.`uid` = '280894561' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/users/sign_up
+Completed 302 Found in 278ms
+11
+12
+13
+14
+15
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2011-04-22 20:27:34 +0530
+  Processing by RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (2.6ms)
+Rendered registrations/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 91ms (Views: 24.3ms | ActiveRecord: 1.1ms)
+11
+12
+13
+14
+15
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 20:27:45 +0530
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@yahoo.com"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@yahoo.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@yahoo.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+Rendered devise/shared/_links.erb (3.1ms)
+Rendered registrations/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 187ms (Views: 28.1ms | ActiveRecord: 0.9ms)
+11
+12
+13
+14
+15
+
+
+Started POST "/users" for 127.0.0.1 at 2011-04-22 20:28:07 +0530
+  Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyVQ86axolFrXTrv/2uQ+ZYZy/GAizLSXjmk6FKiN24=", "user"=>{"email"=>"gaurav.midha@gmail.com"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.`id` FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('gaurav.midha@gmail.com')) LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  describe `users`
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `users` (`email`, `encrypted_password`, `password_salt`, `reset_password_token`, `remember_token`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `created_at`, `updated_at`) VALUES ('gaurav.midha@gmail.com', '', '', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '2011-04-22 14:58:07', '2011-04-22 14:58:07')[0m
+  [1m[35mSQL (1.2ms)[0m  describe `authentications`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `authentications` (`user_id`, `provider`, `uid`, `created_at`, `updated_at`) VALUES (3, 'twitter', '280894561', '2011-04-22 14:58:07', '2011-04-22 14:58:07')[0m
+  [1m[35mSQL (54.5ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  U
